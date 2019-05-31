@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Keyboard from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+
 import api from '~/services/api';
 import getRealm from '~/services/realm';
+
 import Repository from '~/components/Repository';
 
 import {
@@ -49,7 +51,7 @@ export default function Main() {
     try {
       const response = await api.get(`/repos/${input}`);
 
-      await saveRepository(response);
+      await saveRepository(response.data);
 
       setInput('');
       setError(false);

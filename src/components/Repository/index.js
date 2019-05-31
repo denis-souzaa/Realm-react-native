@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import {
-  Container, Name, Description, Stats, Stat, StatCount, Refresh, RefreshText
+  Container, Name, Description, Stats, Stat, StatCount, Refresh, RefreshText,
 } from './styles';
 
 export default function Repository({ data, onRefresh }) {
